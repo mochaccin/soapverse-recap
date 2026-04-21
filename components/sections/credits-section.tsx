@@ -211,7 +211,7 @@ export function CreditsSection() {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             This project was made possible not only by the following people, but also by everyone who took their time to write wholesome messages,
-            hope that kindness gets repaid to every single one of you. (pls check erika on vgen she does cool stuff ;3)
+            hope that kindness gets repaid to every single one of you.
           </p>
         </motion.div>
 
