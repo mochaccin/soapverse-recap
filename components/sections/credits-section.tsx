@@ -9,6 +9,7 @@ interface Contributor {
   role: string;
   message: string;
   avatar?: string;
+  image?: string;
   link?: string;
 }
 
@@ -26,6 +27,7 @@ const contributors: Contributor[] = [
       "Hallooo its eepy h y, also known as ephy or nico for the close ones, to be honest i dont know what i wanted to write in here so im currently raw dogging it with what im feeling rn, first of all im very glad i got to your stream a year ago, i never watched streams before but im so happy i stayed, cause ive meet some awesome people that i value more than anything, from pingpoo and toka my wifes, to everyone who has become my close friends, i dont wanna name them but you all know who you are <33, from soapdax i really wanna thank you for all the fun little streams and events ive been part of, from sophia as one of my closest friends i wanna thank you for everything, specially cause i used to really struggle trusting people, and im glad u proved me wrong, love you lil sister and looking forward to keep watching you achieve your goals in all aspects of your life, pls keep the healthy grind up, and never undervalue urself, keep aiming up cause you deserve to reach the peak little brochacho, te quiero mucho y los quiero mucho a todos <33. PD: WHY WOULD YOU COME TO ERIKAS ROOM WE ALMOST HAD A HEART ATTACK U DONUT IM TOO OLD FOR THIS SHIT",
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/2d9c73e1-d1ca-48ad-9d29-5ef8541573fd-profile_image-70x70.png",
     link: "https://x.com/Ephxion",
+    image: "https://cdn.discordapp.com/attachments/1394403306352148580/1489428468037845033/image.png?ex=69e8c59b&is=69e7741b&hm=9d26b5a60e251467daf2111b7346ed5205d038a92d22b3d9e52aaf12bc286923&animated=true"
   },
   {
     name: "Erika",
@@ -34,6 +36,7 @@ const contributors: Contributor[] = [
       "Congrats on your big 3, happy third birthday little one, you grew up so fast, ephy especially worked very hard on this and i hope you tear up or ideally cry when you read and see it all. You've worked so hard to build your community and you've grown so much as a person and a singer too so you should be incredibly proud of everything you've achieved. You deserve all the good karma and the best and all the good little comments and messages you've gotten and will get in your affiliate stream, you can be and should be so proud, so don't belittle your hard work!! -from your dearest enrique",
     avatar: "https://pbs.twimg.com/profile_images/1896316297916416000/aoR4gqPe_400x400.jpg",
     link: "https://x.com/ys4_bel_",
+    image: "https://media.discordapp.net/attachments/1414033172953432135/1496121184532828304/Untitled_design_1.png?ex=69e8baee&is=69e7696e&hm=eeacca194575cec69b2f749b6d03c37c35037de6621afa8e7b47c7c33e08fef0&animated=true"
   },
 ];
 
@@ -78,6 +81,7 @@ function ContributorCard({
   index: number;
 }) {
   const [avatarError, setAvatarError] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   return (
     <motion.div
@@ -87,8 +91,8 @@ function ContributorCard({
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group"
     >
-      <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 h-full">
-        <div className="flex items-start justify-between mb-4">
+      <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 h-full flex flex-col gap-4">
+        <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             {/* Avatar */}
             <div className="w-12 h-12 rounded-full shrink-0 overflow-hidden bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center">
@@ -125,9 +129,26 @@ function ContributorCard({
             </a>
           )}
         </div>
-        <p className="text-foreground leading-relaxed">
+
+        {/* Message */}
+        <p className="text-foreground leading-relaxed flex-1">
           {contributor.message}
         </p>
+
+        {/* Attached Image - same as Messages component */}
+        {contributor.image && (
+          <button
+            onClick={() => window.open(contributor.image, '_blank')}
+            className="w-full rounded-xl overflow-hidden border border-border hover:border-primary/40 transition-colors"
+          >
+            <img
+              src={contributor.image}
+              alt={`${contributor.name}'s attachment`}
+              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              onError={() => setImageError(true)}
+            />
+          </button>
+        )}
       </div>
     </motion.div>
   );
@@ -190,7 +211,7 @@ export function CreditsSection() {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             This project was made possible not only by the following people, but also by everyone who took their time to write wholesome messages,
-            hope that kindness gets repaid to every single one of you.
+            hope that kindness gets repaid to every single one of you. (pls check erika on vgen she does cool stuff ;3)
           </p>
         </motion.div>
 

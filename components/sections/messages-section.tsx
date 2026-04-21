@@ -114,6 +114,7 @@ const messages: Message[] = [
   {
     id: 12,
     name: "ANDY",
+    image: "https://cdn.discordapp.com/attachments/1414033172953432135/1495874638230720804/image0.jpg?ex=69e87e11&is=69e72c91&hm=679ab065d0ed2cc76483dd01751f111e69440508c8af9fefb671646c3cd39aac&animated=true",
     avatar:
       "https://cdn.discordapp.com/attachments/1414033172953432135/1495874638230720804/image0.jpg?ex=69e7d551&is=69e683d1&hm=32773c44045ff983475c2ae364f6bf642b204be8c273476a63de7df3c7e39b14&animated=true",
     message:
