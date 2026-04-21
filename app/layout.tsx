@@ -16,24 +16,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Soapdaxverse | Affiliate Anniversary Recap',
-  description: 'Celebrating one year of amazing streams, incredible moments, and an unforgettable community.',
+  description: 'Celebrating 3 years of amazing streams, incredible moments, and an unforgettable community.',
   generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/h.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/h.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: '/h.png',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/h.png',
   },
 }
 

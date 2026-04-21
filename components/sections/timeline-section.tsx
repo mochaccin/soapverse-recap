@@ -316,6 +316,13 @@ const milestones: Milestone[] = [
     icon: <Trophy className="w-5 h-5" />,
     highlight: true,
   },
+    {
+    date: "21st Apr 2025",
+    title: "Third year affiliate anniversary!!! <3",
+    description: "24 HOURS OF PURE CHAOS AND MEMORIES TO BE SHARED :3",
+    icon: <Trophy className="w-5 h-5" />,
+    highlight: true,
+  },
 ];
 
 function FloatingArtPiece({

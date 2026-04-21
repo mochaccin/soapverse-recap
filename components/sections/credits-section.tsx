@@ -23,7 +23,7 @@ const contributors: Contributor[] = [
     name: "Ephy",
     role: "Programmer",
     message:
-      "I been thinking of what to write or say, but to be honest i just wanna thank you, i never watched twitch before, but im glad i did that day in june and i stayed, cause it allowed me to meet wonderful people that i treasure a lot. As soapdax thank you for all the fun streams and silly events, and as sophia thank you for ur friendship, looking forward to see you succeed in all aspects of your life so keep the shit up lil sis and keep grinding, good luck and geniuly thank you for everything, and giving me back the hope of trusting people.",
+      "Hallooo its eepy h y, also known as ephy or nico for the close ones, to be honest i dont know what i wanted to write in here so im currently raw dogging it with what im feeling rn, first of all im very glad i got to your stream a year ago, i never watched streams before but im so happy i stayed, cause ive meet some awesome people that i value more than anything, from pingpoo and toka my wifes, to everyone who has become my close friends, i dont wanna name them but you all know who you are <33, from soapdax i really wanna thank you for all the fun little streams and events ive been part of, from sophia as one of my closest friends i wanna thank you for everything, specially cause i used to really struggle trusting people, and im glad u proved me wrong, love you lil sister and looking forward to keep watching you achieve your goals in all aspects of your life, pls keep the healthy grind up, and never undervalue urself, keep aiming up cause you deserve to reach the peak little brochacho, te quiero mucho y los quiero mucho a todos <33",
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/2d9c73e1-d1ca-48ad-9d29-5ef8541573fd-profile_image-70x70.png",
     link: "https://x.com/Ephxion",
   },
@@ -31,7 +31,7 @@ const contributors: Contributor[] = [
     name: "Erika",
     role: "Design, Visuals and Creative Direction",
     message:
-      "blehh",
+      "Congrats on your big 3, happy third birthday little one, you grew up so fast, ephy especially worked very hard on this and i hope you tear up or ideally cry when you read and see it all. You've worked so hard to build your community and you've grown so much as a person and a singer too so you should be incredibly proud of everything you've achieved. You deserve all the good karma and the best and all the good little comments and messages you've gotten and will get in your affiliate stream, you can be and should be so proud, so don't belittle your hard work!! -from your dearest enrique",
     avatar: "https://pbs.twimg.com/profile_images/1896316297916416000/aoR4gqPe_400x400.jpg",
     link: "https://x.com/ys4_bel_",
   },
