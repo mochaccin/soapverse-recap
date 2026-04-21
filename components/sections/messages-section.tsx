@@ -26,7 +26,8 @@ const messages: Message[] = [
   {
     id: 1,
     name: "KOHA",
-    image: "https://cdn.discordapp.com/attachments/1414033172953432135/1495944027688800356/Congrat_s_SOAPDAX.png?ex=69e8beb1&is=69e76d31&hm=d74d7777ecd9d09b61a000813e568fe660f4ef358a26aef1c4220bcb71c24a73&animated=true",
+    image:
+      "https://cdn.discordapp.com/attachments/1414033172953432135/1495944027688800356/Congrat_s_SOAPDAX.png?ex=69e8beb1&is=69e76d31&hm=d74d7777ecd9d09b61a000813e568fe660f4ef358a26aef1c4220bcb71c24a73&animated=true",
     avatar:
       "https://media.discordapp.net/attachments/1414033172953432135/1495944228449161226/Commission4.png?ex=69e81621&is=69e6c4a1&hm=fdb06b3dbf4acc881bec5e29b8de0f86ad347c5610211a2a68bf4fd6a1e5beea&animated=true",
     message:
@@ -114,7 +115,8 @@ const messages: Message[] = [
   {
     id: 12,
     name: "ANDY",
-    image: "https://cdn.discordapp.com/attachments/1414033172953432135/1495874638230720804/image0.jpg?ex=69e87e11&is=69e72c91&hm=679ab065d0ed2cc76483dd01751f111e69440508c8af9fefb671646c3cd39aac&animated=true",
+    image:
+      "https://cdn.discordapp.com/attachments/1414033172953432135/1495874638230720804/image0.jpg?ex=69e87e11&is=69e72c91&hm=679ab065d0ed2cc76483dd01751f111e69440508c8af9fefb671646c3cd39aac&animated=true",
     avatar:
       "https://cdn.discordapp.com/attachments/1414033172953432135/1495874638230720804/image0.jpg?ex=69e7d551&is=69e683d1&hm=32773c44045ff983475c2ae364f6bf642b204be8c273476a63de7df3c7e39b14&animated=true",
     message:
@@ -143,7 +145,7 @@ const messages: Message[] = [
     name: "Fumimi",
     avatar:
       "https://media.discordapp.net/attachments/1414033172953432135/1495841374329635069/fumichan.png?ex=69e7b657&is=69e664d7&hm=b5d96b65b3d36bc05ecbfa9131b8413df4b6f0c4f473425886be06d23bb7f5a2&animated=true&width=1549&height=1549",
-    message: "アフィリエイト記念おめでとう！ 無理せず自分のペースで楽しんでね♪",
+    message: "アフィリエイト記念おめでとう！ 無理せず自分のペースで楽しんでね♪. Congratulations on joining the affiliate program! Take it easy and enjoy it at your own pace♪",
   },
   {
     id: 16,
@@ -156,7 +158,8 @@ const messages: Message[] = [
   {
     id: 17,
     name: "LevVimi",
-    image: "https://media.discordapp.net/attachments/1495832983859368037/1496012933069668482/soapp.png?ex=69e8561d&is=69e7049d&hm=50e0c455aac981d2c4e1e33cd3e67ff45592b20471606ed1295cb644a8d22d52&animated=true",
+    image:
+      "https://media.discordapp.net/attachments/1495832983859368037/1496012933069668482/soapp.png?ex=69e8561d&is=69e7049d&hm=50e0c455aac981d2c4e1e33cd3e67ff45592b20471606ed1295cb644a8d22d52&animated=true",
     avatar:
       "https://cdn.discordapp.com/attachments/1495832983859368037/1495944424902103131/Cry1.png?ex=69e81650&is=69e6c4d0&hm=c415a30897fa98aa8986f0af21918b601302077e7815449c8edd4a43d00a3c47&animated=true",
     message:
@@ -351,14 +354,39 @@ const messages: Message[] = [
     name: "Chinnie",
     avatar:
       "https://static-cdn.jtvnw.net/jtv_user_pictures/bf5273e7-fd87-465a-879d-16966dfa7734-profile_image-300x300.png",
-    message: "Thank you soapdax for being an amazing person and personally being an inspiration for me to start streaming again! Happy affiliate anniversary! - Chinnie Vasectomy the 3rd",
+    message:
+      "Thank you soapdax for being an amazing person and personally being an inspiration for me to start streaming again! Happy affiliate anniversary! - Chinnie Vasectomy the 3rd",
   },
-    {
+  {
     id: 42,
     name: "Chiza",
     avatar:
       "https://cdn.discordapp.com/attachments/1414033172953432135/1496213100318298182/ChizaRawrStill.png?ex=69e91089&is=69e7bf09&hm=9f2d86ba8e346bb9f17473bd912fa57f0a8c576eea216f5dec993b349f758a38&animated=true",
-    message: "Soaaapp, my dearest bubble of cutiefulness 🩵 Congratulations on hitting such a big milestone! 🎉🎉 Although I have no idea what all this streaming lingo means, I think anyone with eyes can tell you've built up such a wonderful community - just look at all these beautiful connections and memories... ✨ Everyone here is so warm and welcoming, and I believe it's because you lead by example, and attracted so many lovely people. Honestly, you're so smart and considerate and funny, like bruhh, leave something for the rest of us...? I know we haven't known each other for long, nor am I a particularly active member of the community, but please know I am eternally proud of everything you achieve. Your hard-work and talents are so admirable, please keep it up, I'll always support you as best I can! Thank you for investing your time and energy and efforts into everything you do, I hope your journey and development stay forever rewarding. Wishing you the best of luck with future endeavours, wherever your path leads you~ 🍀(Okayy stopping here before I'm d*e of mushyness and embarrassment hmpf) Can't wait to hang out irl again hehe, but until then, I'll be lurking around should you ever need me for anythingg Lots of love! MWAHH 💕 Chiza",
+    message:
+      "Soaaapp, my dearest bubble of cutiefulness 🩵 Congratulations on hitting such a big milestone! 🎉🎉 Although I have no idea what all this streaming lingo means, I think anyone with eyes can tell you've built up such a wonderful community - just look at all these beautiful connections and memories... ✨ Everyone here is so warm and welcoming, and I believe it's because you lead by example, and attracted so many lovely people. Honestly, you're so smart and considerate and funny, like bruhh, leave something for the rest of us...? I know we haven't known each other for long, nor am I a particularly active member of the community, but please know I am eternally proud of everything you achieve. Your hard-work and talents are so admirable, please keep it up, I'll always support you as best I can! Thank you for investing your time and energy and efforts into everything you do, I hope your journey and development stay forever rewarding. Wishing you the best of luck with future endeavours, wherever your path leads you~ 🍀(Okayy stopping here before I'm d*e of mushyness and embarrassment hmpf) Can't wait to hang out irl again hehe, but until then, I'll be lurking around should you ever need me for anythingg Lots of love! MWAHH 💕 Chiza",
+  },
+  {
+    id: 43,
+    name: "Izosaki",
+    avatar:
+      "https://i.redd.it/these-stupid-ass-hamster-that-i-keep-seeing-on-tiktok-v0-2p47szoq84yf1.jpg?width=1320&format=pjpg&auto=webp&s=6319845ee39b769d5486163ac624deb13c0415d3",
+    message:
+      "Happy Affiliate Anniversary Soap! It hasn't been very long since we first met, and i'm so happy to be a friend of yours! I can tell that you're a very TALENTED streamer and I'm so proud of you :) I can't write as much because we haven't talked a lot, but I would love to talk w you even more and interact with your lovely community that you built from the ground up! Also, don't undermine your singing. Your singing is by far one of the most unique voices i've heard, and I genuinely, from the bottom of my heart, think that you have MASSIVE potential.  Congratulations! I hope you reach higher and higher from here~ -IZOSAKI (이조사키 | いぞさき) ",
+  },
+  {
+    id: 44,
+    name: "Hicky",
+    avatar:
+      "https://i.pinimg.com/236x/f5/67/ae/f567aef58b788e531f842d82db0968a2.jpg",
+    message:
+      "Happy Affiliate Anniversary Soap!! Lurking your stream became my routine in the best way!! I will be fully going back to Japan this October but for sure I will still lurk!! Cograts!!",
+  },
+  {
+    id: 45,
+    name: "復活の下着",
+    avatar:
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
+    message: "ソープ！他と比べて出会いこそは短いが、俺が数少なく参加した配信は実に面白く楽しかった。殆どロムになるが、横が面で聞こえてくる配信は面白そうで遂にやにやしちゃうw　多言語を喋るのは俺だけなのに、わざわざ翻訳のボットを付けてくれる優しさも素晴らしく思う！ソープの周りはクリエイティブで友達思いな人ばかりで、日ごろの行いの良さが伝わってくるし、いつだって明るくて元気かつ謙遜なふるまいは本当に尊敬ができて好きだよ！日常でソープと出会える人達がとてもうらやましい。俺をオメガと呼ぶソープは俺の名前の意味は分からないかもしれないけど、俺は誇り高き下着の仙人。そんな仙人から知恵ある言葉を許されるのなら、ソープに授けたい : 「ダイアじゃない宝石の良さは、ダイアであろうとしないことだ」　心配はないだろうけど、この世界の人は皆、自分の道しるべを作らないと終点へたどり着けないのだ。ソープなりの道しるべを見失わないことを常ごろ祝うよ！あふぃおめでとう！！！ Soap! Even though our interactions are brief compared to others, the few streams I’ve joined were genuinely fun and entertaining. I mostly just lurk, but when I catch snippets of the stream from the side, it sounds so entertaining that I can’t help but grin to myself lol. Even though I’m the only one speaking multiple languages, I think it’s amazing how kind they are to go out of their way to set up a translation bot for me! Everyone around Soap is creative and considerate of their friends; you can really tell they’re good people. I truly respect and love how they’re always cheerful, energetic, and humble! I’m so jealous of the people who get to meet Soap in their daily lives. Soap calls me “Omega”—they might not know the meaning of my name, but I’m a proud underwear sage. If such a sage is permitted to bestow words of wisdom, I’d like to offer this to Soap: “The beauty of a gem that isn’t a diamond lies in the fact that it doesn’t try to be one.” You probably don’t need to worry, but in this world, everyone must create their own guideposts to reach the final destination. I’ll always be cheering for you to never lose sight of your own unique path! Happy birthday, Afi!!!",
   },
 ];
 
@@ -522,7 +550,10 @@ function MartyFlipCard({ message }: { message: Message }) {
       >
         {/* Front face */}
         <div
-          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+          }}
           className="absolute inset-0 p-5 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 flex flex-col gap-3"
         >
           <div className="flex items-start gap-3">
@@ -541,15 +572,21 @@ function MartyFlipCard({ message }: { message: Message }) {
               )}
             </div>
             <div className="min-w-0 flex-1">
-              <h4 className="font-semibold text-foreground truncate">{message.name}</h4>
+              <h4 className="font-semibold text-foreground truncate">
+                {message.name}
+              </h4>
               <div className="flex items-center gap-1 text-primary">
                 <Heart className="w-3 h-3 fill-current" />
                 <span className="text-xs">Community Member</span>
               </div>
             </div>
           </div>
-          <p className="text-foreground text-md leading-relaxed flex-1">{message.message}</p>
-          <p className="text-xs text-muted-foreground italic text-center">hover to reveal more ✨</p>
+          <p className="text-foreground text-md leading-relaxed flex-1">
+            {message.message}
+          </p>
+          <p className="text-xs text-muted-foreground italic text-center">
+            hover to reveal more ✨
+          </p>
         </div>
 
         {/* Back face */}
@@ -567,7 +604,9 @@ function MartyFlipCard({ message }: { message: Message }) {
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
-            <p className="text-white text-sm font-semibold text-center">— MARTY 🎉</p>
+            <p className="text-white text-sm font-semibold text-center">
+              — MARTY 🎉
+            </p>
           </div>
         </div>
       </div>
