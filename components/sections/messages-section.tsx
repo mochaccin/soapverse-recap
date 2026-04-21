@@ -108,7 +108,7 @@ const messages: Message[] = [
     id: 11,
     name: "TheEnglishFolk",
     avatar:
-      "https://cdn.discordapp.com/attachments/1414033172953432135/1495895027535315154/baldsoap.png?ex=69e7e84e&is=69e696ce&hm=07662c2dcbd844fe37b1638ba87f9e0b023c91f572e44ece211b6a653b589117&animated=true",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message:
       "CONGRATS ON A YEAR OF AFFILIATE SOAP!!!!!! There is no stream I'd rather tune into and lurk occasionally while chilling after a long day! Here's to another year with your amazing community and one of the STINKEST streamer ik (even despite the name you'd think you'd be less stinky)!",
   },
@@ -118,7 +118,7 @@ const messages: Message[] = [
     image:
       "https://cdn.discordapp.com/attachments/1414033172953432135/1495874638230720804/image0.jpg?ex=69e87e11&is=69e72c91&hm=679ab065d0ed2cc76483dd01751f111e69440508c8af9fefb671646c3cd39aac&animated=true",
     avatar:
-      "https://cdn.discordapp.com/attachments/1414033172953432135/1495874638230720804/image0.jpg?ex=69e7d551&is=69e683d1&hm=32773c44045ff983475c2ae364f6bf642b204be8c273476a63de7df3c7e39b14&animated=true",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message:
       "Heyyyyyy soap Congrats on the affiliate anniversary!!! I don't have anything to celebrate with you right now but, I'm sure there are only many memories and plans to come in the future. I hope the streams are doing you good and I look forward to seeing you on the next stream or whenever I can get on! From the anderdingus",
   },
@@ -126,7 +126,7 @@ const messages: Message[] = [
     id: 13,
     name: "TOKA",
     avatar:
-      "https://cdn.discordapp.com/attachments/1414033172953432135/1495870810466816192/20260111_1334001-removebg-preview.png?ex=69e7d1c1&is=69e68041&hm=ecdd5e38bcfda3785157aae47a78e09b74f8df5301f7364f1af5127bb81b5934&animated=true",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message:
       "CONGRATS ON UR AFFILIATE ANNIVERSARY SOAPDAX!!! Thanku for building such an amazing community and being THE BEST streamer on the internet! You are genuinely one of the most entertaining streamers out there and never fail to put a smile on my face. I look forward to another amazing year with u as my OSHI (kill me). NEVER SAY U ARE GRADUATING I WILL FIND U!!!! LOVES U SOAPDAX <33333",
   },
@@ -134,7 +134,7 @@ const messages: Message[] = [
     id: 14,
     name: "CRAVY",
     image:
-      "https://cdn.discordapp.com/attachments/1414033172953432135/1495870758285476003/Screenshot_2025-08-01_003744.png?ex=69e7d1b4&is=69e68034&hm=82d3cbbbad5629f9a81be873cda202b263b34d9fd7b4e9f71daecf36b3686802&animated=true",
+      "https://cdn.discordapp.com/attachments/1414033172953432135/1495870758285476003/Screenshot_2025-08-01_003744.png?ex=69e87a74&is=69e728f4&hm=aabeb37f842e022eceb298e6829ccea839ec0991f8988bc34debe6c36c9bcf31&animated=true",
     avatar:
       "https://media.discordapp.net/attachments/1414033172953432135/1496180803590426806/IMG_0063.png?ex=69e8f275&is=69e7a0f5&hm=7318a19bbc770df0219eaf34011c5e67e07fd8439ae030b14d4394a6afee546a&animated=true",
     message:
@@ -144,14 +144,14 @@ const messages: Message[] = [
     id: 15,
     name: "Fumimi",
     avatar:
-      "https://media.discordapp.net/attachments/1414033172953432135/1495841374329635069/fumichan.png?ex=69e7b657&is=69e664d7&hm=b5d96b65b3d36bc05ecbfa9131b8413df4b6f0c4f473425886be06d23bb7f5a2&animated=true&width=1549&height=1549",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message: "アフィリエイト記念おめでとう！ 無理せず自分のペースで楽しんでね♪. Congratulations on joining the affiliate program! Take it easy and enjoy it at your own pace♪",
   },
   {
     id: 16,
     name: "CODEDELEMENT",
     avatar:
-      "https://cdn.discordapp.com/attachments/1414033172953432135/1495840829695066333/IMG_0061.png?ex=69e7b5d5&is=69e66455&hm=6c448baf4a98b3ae389f6043a7813217a9ce6db79ae12f2413cf5a95c6df6605&animated=true",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message:
       "Hi Soap. It's crazy that it's been over three years since we met and you're now celebrating 3 years of being an affiliate. I've seen your channel grow from all the hard work you've put in and I'm so happy to have witnessed you go through your ups and downs, steadily growing both as a streamer and a person. Girl you used to be so shy to do anything new and now look at you! You've even done a face reveal! Congratulations on everything Soap. Not just the anniversary but the whole process that you went through to get where you are right now. While I do sometimes miss the long conversations we'd have in your chat since I'd be the only one there, I love that you now have a community that's always there for you, appreciates you, and supports you wholeheartedly. Alright now all that's outta the way pls gimme my Ubel cosplay with matching armpit poses. Thanks",
   },
@@ -194,7 +194,7 @@ const messages: Message[] = [
     name: "Gilnic",
     audio: "audio/gilnic.m4a",
     avatar:
-      "https://cdn.discordapp.com/attachments/1495841428277039368/1495893408374325268/hu8175.jpg?ex=69e7e6cc&is=69e6954c&hm=fdab61fc1bd401aeaf39cbc3bf841f1938978b330debdc65a59f718f931903c8&animated=true",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message:
       "Hey husband! Still can't believe you managed to lose your one ok rock shirt... Ok now that you've caught a random stray time for the real message; Thanks for a year of fun streams, even though my attendance has been lacking lately due to real life keeping me busy I'm still rooting for you, and am glad you're still going strong. Who'd have thought the random e-girl i bullied in some japanese dudes stream would turn out to be one of my favourite streamers, as well as among my most watched streams of the year? Youve done great this past year, keep up the great work, Love, your wife GilNic.",
   },
@@ -202,7 +202,7 @@ const messages: Message[] = [
     id: 22,
     name: "KarmaNMG",
     avatar:
-      "https://cdn.discordapp.com/attachments/1495837835301752832/1495884636092366929/Karma.png?ex=69e7dea1&is=69e68d21&hm=642adee44a1061bccd44e669c4be96a5095c1d7f2f45297a4dbf6a787379bc95&animated=true",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message:
       "Hi Soap! Happy Affiliate Anniversary! Thank you for providing everyone with many hours of amazing content. Your streams helped our boredom by giving us professional level gameplay and funny moments to watch. I might not be able to catch your stream much with how busy stuff can get but I know that whenever I am able to tune in and watch your streams that I will have a lot of fun and enjoy my time watching your content. I wish that you keep enjoying streaming and keep everyone in chat excited to get your stream start notifications. Love the cozy community you have built up and the many amazing hours of entertainment you gave to us! Keep up the cool stuff you do You're a wonderful person to hang out with and the best smooth brain vtuber to watch. We all appreciate your dedication and work that you put to keep us addicted and watching your streams. If I cannot catch the stream live because of exam prep let me still wish you to have an amazing rest of your stream. -Karma",
   },
@@ -226,7 +226,7 @@ const messages: Message[] = [
     id: 25,
     name: "Vakie",
     avatar:
-      "https://cdn.discordapp.com/attachments/1397701554068394026/1495843326618763304/f12f8449227c6b4c4ba90b1aefd62325.jpg?ex=69e7b828&is=69e666a8&hm=f8ea9a0fc92c389557c952dd9af99379689825abe1055a62e62426b99f1eec55&animated=true",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message:
       "Happy Affiliate Anniversary!!! Congrats on everything you've achieved it's honestly so cool to see how far you've come. Thank you for all the fun streams and the great vibes you always bring. I can't wait to see what you get up to next",
   },
@@ -234,7 +234,7 @@ const messages: Message[] = [
     id: 26,
     name: "Okami",
     avatar:
-      "https://media.discordapp.net/attachments/1409551524144877702/1495837166519976208/OKAMIHI.gif?ex=69e7b26b&is=69e660eb&hm=ca09451ec81e509b610b46842146d65c678d46494c29358797eaaad159ac9826&animated=true&width=1652&height=1453",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message:
       "Happy Anniversary Soap MY GOAT! it has been my pleasure meeting you and interacting with you, you have been nothing but kind to me and thank you for that ^^ still remember the time when we drew in your magma stream and that was my first impression of you and you to me, couldn't ever replace such a fun core memory! I hope that your Anniversary will bring you more motivation towards more streams and more engagement with your community, YOU ARE DOING SO WELL, keep holding on to that community for as long as you could because you have one strong bond with yours. HAPPY ANNIVERSARY AND HAVE A GREAT DAY GOAT!",
   },
@@ -250,7 +250,7 @@ const messages: Message[] = [
     id: 28,
     name: "Bizcui",
     avatar:
-      "https://media.discordapp.net/attachments/1495840738766885055/1495846016740622436/e.png?ex=69e7baa9&is=69e66929&hm=109a0c1cbc8342393a74b2a6b1c8b93744d0f3fd012917686fc1511c3e653971&animated=true",
+      "https://tr.rbxcdn.com/180DAY-2f24210da0be6d49778b1115e4dca6f4/420/420/ShoulderAccessory/Webp/noFilter",
     message: "",
     audio: "/audio/bizcui.mp3",
   },
