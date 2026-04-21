@@ -199,7 +199,7 @@ const clips: Clip[] = [
     id: 21,
     title: "content warning montage",
     thumbnail: "/clips/cwmt.png",
-    videoSrc: "/clips/cwm.mov",
+    videoSrc: "/clips/cwm.mp4",
     isLocal: true,
   },
   {
