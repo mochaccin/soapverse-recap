@@ -316,7 +316,7 @@ const messages: Message[] = [
     avatar:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGQKrIlLOcx_kngBF1h7iRCgaek-nH-tiaAA&s",
     message:
-      "Sophia soapdax you are a goated streamer as well, thank you for all the amazing streams you've done this year and congrats on all you've achieved, hope you have another good year broski much love",
+      "Sophia soapdax you are a goated streamer, thank you for all the amazing streams you’ve done this year and congrats on all you’ve achieved, im very grateful for our friendship and the friends ive made because of ur existence, you will always be my goat and someone im forever grateful i dont know where i would be without joining that server on that random night its kinda crazy to think about that our friendship has come so far just from that, meeting you in london then the rotterdam trip then manchester some of the best days and nights of my life, hope you have another good year broski much love",
   },
   {
     id: 37,
