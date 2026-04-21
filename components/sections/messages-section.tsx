@@ -357,7 +357,7 @@ const messages: Message[] = [
     id: 42,
     name: "Chiza",
     avatar:
-      "https://static-cdn.jtvnw.net/jtv_user_pictures/bf5273e7-fd87-465a-879d-16966dfa7734-profile_image-300x300.png",
+      "https://cdn.discordapp.com/attachments/1414033172953432135/1496213100318298182/ChizaRawrStill.png?ex=69e91089&is=69e7bf09&hm=9f2d86ba8e346bb9f17473bd912fa57f0a8c576eea216f5dec993b349f758a38&animated=true",
     message: "Soaaapp, my dearest bubble of cutiefulness 🩵 Congratulations on hitting such a big milestone! 🎉🎉 Although I have no idea what all this streaming lingo means, I think anyone with eyes can tell you've built up such a wonderful community - just look at all these beautiful connections and memories... ✨ Everyone here is so warm and welcoming, and I believe it's because you lead by example, and attracted so many lovely people. Honestly, you're so smart and considerate and funny, like bruhh, leave something for the rest of us...? I know we haven't known each other for long, nor am I a particularly active member of the community, but please know I am eternally proud of everything you achieve. Your hard-work and talents are so admirable, please keep it up, I'll always support you as best I can! Thank you for investing your time and energy and efforts into everything you do, I hope your journey and development stay forever rewarding. Wishing you the best of luck with future endeavours, wherever your path leads you~ 🍀(Okayy stopping here before I'm d*e of mushyness and embarrassment hmpf) Can't wait to hang out irl again hehe, but until then, I'll be lurking around should you ever need me for anythingg Lots of love! MWAHH 💕 Chiza",
   },
 ];
