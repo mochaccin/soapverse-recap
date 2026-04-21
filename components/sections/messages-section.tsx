@@ -185,7 +185,7 @@ const messages: Message[] = [
     id: 20,
     name: "Lomi",
     avatar:
-      "https://media.discordapp.net/attachments/1404213499118227638/1495897048686268716/lomi_blob_2025_static.png?ex=69e7ea30&is=69e698b0&hm=30031edddc683485d588d837c7df1b0b68a6923149e0e5efcff3ecddba2eac1a&animated=true",
+      "https://i.redd.it/these-stupid-ass-hamster-that-i-keep-seeing-on-tiktok-v0-2p47szoq84yf1.jpg?width=1320&format=pjpg&auto=webp&s=6319845ee39b769d5486163ac624deb13c0415d3",
     message:
       "heyaaa soapp!! Happy Affiliate Anniversarry! Congrats on getting this far in your streaming journey! I know you're very passionate about streaming so I'm very proud on where you are, although our time knowing each other isn't that long, I still am glad that I got to know you gang Cheers to more streaming and our friendship gang! keep up the good work homie :DD much love ! -lomi",
   },
