@@ -1,108 +1,94 @@
 "use client"
 
+import { useMemo, useState } from "react"
 import Image from "next/image"
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ArrowDown, ArrowUpRight, Gift, Headphones, Play, Sparkles, Volume2 } from "lucide-react"
+import { ArrowDown, Gift, Heart, LockKeyhole, Play, Sparkles, Stars } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const friends = [
-  { src: "/b.png", alt: "Koohaaruuu friend illustration", className: "left-[4%] top-[18%]" },
-  { src: "/bubz.png", alt: "Koohaaruuu friend illustration", className: "right-[5%] top-[22%]" },
-  { src: "/c.png", alt: "Koohaaruuu friend illustration", className: "left-[12%] bottom-[17%]" },
-  { src: "/h.png", alt: "Koohaaruuu friend illustration", className: "right-[12%] bottom-[12%]" },
-  { src: "/mangadax.png", alt: "Koohaaruuu friend illustration", className: "left-[39%] top-[13%]" },
+  { name: "friend one", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vipersoap-PdOBkYjB31nUZaP1jqQqC4iJkG6L9d.gif", position: "left-[5%] top-[16%]" },
+  { name: "friend two", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soap-talkgif-Y15s75BBYOv0BHDccKoVSeSruK0iE0.gif", position: "right-[6%] top-[22%]" },
+  { name: "friend three", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/halloweensoap-MnLLyEqyCzg8bjZS8CXFTGWxqRpoWZ.gif", position: "left-[18%] bottom-[18%]" },
 ]
 
-const clips = [
-  { title: "Big big boy", file: "/clips/big big boy.mp4", label: "A classic" },
-  { title: "Binbon moment", file: "/clips/binbon.mp4", label: "Unhinged" },
-  { title: "CWM takes over", file: "/clips/cwm.mp4", label: "Community" },
-  { title: "Cyno says hi", file: "/clips/cyno.mp4", label: "The lore" },
-  { title: "Evolve", file: "/clips/evolve.mp4", label: "Core memory" },
-  { title: "Katz cameo", file: "/clips/katz.mp4", label: "Special guest" },
+const messages = [
+  { from: "Your favorite lurker", text: "Three years of chaos, comfort, and the kind of laughs that make a bad day disappear. Happy birthday, Koo!" },
+  { from: "The late-night crew", text: "Thank you for making every stream feel like coming home. We are so lucky to know you." },
+  { from: "A very normal friend", text: "You built a place where everyone can be exactly themselves. Today we celebrate you." },
 ]
-
-const notes = [
-  ["baldsoap", "You make every stream feel like coming home. Thank you for building a space where everyone gets to be weird, loud, and completely themselves."],
-  ["cwm", "From the first lurk to every late-night yap session: happy birthday, Koo. Your community is lucky to have you."],
-  ["mangadax", "Your laugh is genuinely a jump scare and a serotonin boost at the same time. Never change."],
-  ["the whole chat", "Thank you for the memories, the chaos, and all the little moments that became our favourite stories."],
-]
-
-function SectionKicker({ children }: { children: React.ReactNode }) {
-  return <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-fuchsia-300/80">{children}</p>
-}
 
 export function RecapExperience() {
   const [reveals, setReveals] = useState(0)
-  const revealed = reveals >= 3
-  const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 })
+  const [unlocked, setUnlocked] = useState(false)
+  const [troll, setTroll] = useState(false)
+  const buttonPosition = useMemo(() => reveals === 1 ? "translate-x-24 -translate-y-8" : reveals === 2 ? "-translate-x-24 translate-y-6" : "", [reveals])
 
-  function revealGift() {
+  const reveal = () => {
     if (reveals < 2) {
       setReveals((value) => value + 1)
-      setButtonPosition({ x: reveals === 0 ? 110 : -100, y: reveals === 0 ? -35 : 42 })
-    } else {
-      setReveals(3)
+      setTroll(true)
+      return
     }
+    setReveals(3)
+    setUnlocked(true)
+    setTroll(false)
   }
 
+  const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+
   return (
-    <main className="overflow-hidden bg-[#3A2838] text-[#fff8ff] selection:bg-fuchsia-300 selection:text-[#3A2838]">
-      <AnimatePresence mode="wait">
-        {!revealed ? (
-          <motion.section key="gate" className="relative flex min-h-screen items-center justify-center px-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, scale: 1.08 }}>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,#9662a850,transparent_36%),linear-gradient(135deg,#3A2838,#241a2a)]" />
-            <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-fuchsia-400/10 blur-3xl" />
-            <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-violet-600/20 blur-3xl" />
-            {[...Array(18)].map((_, index) => <motion.span key={index} className="absolute size-1 rounded-full bg-fuchsia-200/60" style={{ left: `${(index * 31) % 100}%`, top: `${(index * 47) % 100}%` }} animate={{ opacity: [0.15, 0.8, 0.15], y: [0, -16, 0] }} transition={{ duration: 2.4 + index % 3, repeat: Infinity, delay: index * 0.1 }} />))}
-            <div className="relative z-10 flex max-w-lg flex-col items-center text-center">
-              <motion.div animate={{ y: [0, -8, 0], rotate: [-2, 2, -2] }} transition={{ duration: 3, repeat: Infinity }} className="mb-8 grid size-28 place-items-center rounded-[2rem] border border-fuchsia-200/30 bg-white/10 shadow-2xl shadow-fuchsia-950/50 backdrop-blur-md">
-                <Gift className="size-14 text-fuchsia-200" strokeWidth={1.4} />
-              </motion.div>
-              <Badge className="mb-5 border-fuchsia-200/20 bg-fuchsia-200/10 px-4 py-1.5 text-fuchsia-100">A tiny surprise for koohaaruuu</Badge>
-              <h1 className="font-serif text-5xl leading-[0.95] tracking-tight sm:text-7xl">Preparing your<br /><span className="text-fuchsia-200">birthday recap</span></h1>
-              <p className="mt-6 max-w-sm text-sm leading-7 text-fuchsia-100/65">A carefully assembled collection of clips, kind words, and questionable decisions from the people who love your streams.</p>
-              <div className="mt-10 flex min-h-20 items-center justify-center">
-                <motion.div animate={{ x: buttonPosition.x, y: buttonPosition.y }} transition={{ type: "spring", stiffness: 260, damping: 18 }}>
-                  <Button onClick={revealGift} className="h-14 rounded-full bg-fuchsia-200 px-8 text-base font-semibold text-[#3A2838] shadow-xl shadow-fuchsia-950/30 hover:bg-white">{reveals === 0 ? "Reveal the surprise" : reveals === 1 ? "Almost..." : "Okay, okay, click me"}<Sparkles data-icon="inline-end" /></Button>
-                </motion.div>
-              </div>
-              <p className="mt-3 text-xs text-fuchsia-100/40">{reveals === 0 ? "click to begin" : `${reveals}/3 reveals unlocked`}</p>
-            </div>
-          </motion.section>
-        ) : (
-          <motion.div key="recap" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-            <section id="welcome" className="relative flex min-h-screen items-center px-6 py-24 sm:px-10">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,#9b5dc14a,transparent_40%),linear-gradient(180deg,#3A2838,#2b1d31)]" />
-              {friends.map((friend, index) => <motion.div key={friend.src} className={`absolute ${friend.className} hidden w-20 sm:block md:w-28`} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1, y: [0, index % 2 ? 15 : -15, 0], rotate: index % 2 ? [3, -3, 3] : [-3, 3, -3] }} transition={{ opacity: { delay: 0.4 + index * 0.12 }, scale: { delay: 0.4 + index * 0.12 }, y: { duration: 4 + index, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 5 + index, repeat: Infinity, ease: "easeInOut" } }}><Image src={friend.src} alt={friend.alt} width={150} height={150} className="h-auto w-full object-contain drop-shadow-[0_20px_20px_rgba(20,10,30,.5)]" /></motion.div>)}
-              <div className="relative z-10 mx-auto max-w-4xl text-center">
-                <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-fuchsia-200">The koohaaruuu archive</motion.p>
-                <motion.h2 initial={{ y: 25, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.15 }} className="font-serif text-6xl leading-[0.86] tracking-tight sm:text-8xl">Happy birthday,<br /><span className="text-fuchsia-200">Koo!</span></motion.h2>
-                <motion.p initial={{ y: 25, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }} className="mx-auto mt-8 max-w-xl text-base leading-8 text-fuchsia-100/70 sm:text-lg">This is a little time capsule from the people who have laughed, lurked, clipped, and grown alongside you. Scroll slowly. There is a lot of love in here.</motion.p>
-                <motion.a href="#story" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="mt-12 inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-200 hover:text-white">Start the story <ArrowDown className="size-4" /></motion.a>
-              </div>
-            </section>
+    <main className="overflow-hidden bg-background text-foreground">
+      <section className="relative flex min-h-screen items-center justify-center px-6 py-24" aria-label="Birthday reveal">
+        <div className="absolute inset-0 birthday-grid opacity-50" />
+        <div className="absolute left-1/2 top-1/2 size-[38rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-[120px]" />
+        <div className="relative z-10 mx-auto flex max-w-xl flex-col items-center text-center">
+          <Badge variant="outline" className="mb-7 border-primary/40 bg-primary/10 px-4 py-2 text-primary"><Stars data-icon="inline-start" /> private birthday transmission</Badge>
+          <div className="mb-8 flex size-24 items-center justify-center rounded-3xl border border-primary/30 bg-card/80 shadow-2xl shadow-primary/20"><Gift className="size-11 text-primary" /></div>
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.35em] text-muted-foreground">koohaaruuu.exe</p>
+          <h1 className="text-balance text-5xl font-bold tracking-tight sm:text-7xl">A little surprise is <span className="text-primary">loading.</span></h1>
+          <p className="mt-6 max-w-md text-pretty text-muted-foreground">There is something waiting behind this very secure, definitely-not-suspicious button.</p>
+          <div className="mt-10 flex h-24 items-center justify-center">
+            <Button onClick={reveal} size="lg" className={`rounded-full px-8 shadow-lg shadow-primary/20 transition-transform duration-500 ${buttonPosition}`}>
+              {reveals === 0 ? "Reveal surprise" : reveals < 3 ? "Try again" : "Opened"} {reveals < 3 ? <LockKeyhole data-icon="inline-end" /> : <Sparkles data-icon="inline-end" />}
+            </Button>
+          </div>
+          <div className="mt-3 flex gap-2" aria-label={`${reveals} of 3 reveals complete`}>
+            {[0, 1, 2].map((step) => <span key={step} className={`h-1.5 w-10 rounded-full transition-colors ${step < reveals ? "bg-primary" : "bg-muted"}`} />)}
+          </div>
+          <p className="mt-5 h-5 text-sm text-primary">{troll ? "The button has developed free will." : reveals === 3 ? "Surprise unlocked." : "3 clicks required"}</p>
+        </div>
+      </section>
 
-            <section id="story" className="mx-auto grid max-w-6xl gap-12 px-6 py-28 sm:px-10 lg:grid-cols-[0.8fr_1.5fr] lg:items-center">
-              <div><SectionKicker>Chapter one / the story</SectionKicker><h2 className="max-w-md font-serif text-5xl leading-none sm:text-6xl">Every stream became a <span className="text-fuchsia-200">memory.</span></h2><p className="mt-7 max-w-sm text-sm leading-7 text-fuchsia-100/60">Before the clips and the messages, there was just you showing up. This little film is a love letter to the journey so far.</p><div className="mt-8 flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-fuchsia-200/70"><span className="grid size-9 place-items-center rounded-full border border-fuchsia-200/25"><Play className="size-3 fill-current" /></span> Press play when ready</div></div>
-              <div className="overflow-hidden rounded-[2rem] border border-fuchsia-200/15 bg-black/20 p-2 shadow-2xl shadow-purple-950/30"><video className="aspect-video w-full rounded-[1.5rem] bg-[#1d1423]" controls poster="/clips/evolve.png"><source src="/clips/evolve.mp4" type="video/mp4" />Your browser does not support video playback.</video></div>
-            </section>
+      {unlocked && <div className="fixed inset-0 z-40 pointer-events-none animate-pulse bg-primary/10" aria-hidden="true" />}
 
-            <section id="tributes" className="bg-[#2b1d31] px-6 py-28 sm:px-10"><div className="mx-auto max-w-6xl"><SectionKicker>Chapter two / from the archive</SectionKicker><div className="flex flex-col justify-between gap-6 md:flex-row md:items-end"><h2 className="max-w-xl font-serif text-5xl leading-none sm:text-6xl">Proof that the chaos was <span className="text-fuchsia-200">worth it.</span></h2><p className="max-w-xs text-sm leading-6 text-fuchsia-100/55">Videos, voice notes, and moments that deserve a replay.</p></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{clips.map((clip) => <article key={clip.file} className="group overflow-hidden rounded-2xl border border-fuchsia-100/10 bg-[#3A2838] p-2"><div className="relative overflow-hidden rounded-xl"><video className="aspect-video w-full bg-black object-cover" controls preload="metadata"><source src={clip.file} type="video/mp4" /></video><span className="pointer-events-none absolute left-3 top-3 rounded-full bg-[#3A2838]/80 px-3 py-1 text-[10px] uppercase tracking-widest text-fuchsia-100 backdrop-blur">{clip.label}</span></div><div className="flex items-center justify-between px-2 pb-2 pt-4"><h3 className="font-medium">{clip.title}</h3><ArrowUpRight className="size-4 text-fuchsia-200/50 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" /></div></article>))}</div><div className="mt-8 grid gap-5 md:grid-cols-2"><audio className="w-full" controls src="/audio/bizcui.mp3" /><audio className="w-full" controls src="/audio/gilnic.m4a" /></div></div></section>
+      <section id="welcome" className="relative flex min-h-screen items-center justify-center border-t border-border/60 px-6 py-28">
+        {friends.map((friend, index) => <Image key={friend.name} src={friend.src} alt={friend.name} width={96} height={96} unoptimized className={`absolute ${friend.position} pixelated animate-float-${index + 1} hidden rounded-2xl border border-primary/30 bg-card/70 p-2 shadow-xl md:block`} />)}
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <p className="font-mono text-xs uppercase tracking-[0.35em] text-primary">welcome to the koohaaruuu archive</p>
+          <h2 className="mt-5 text-balance text-6xl font-bold tracking-tight sm:text-8xl">Happy birthday, <span className="text-primary">Koo.</span></h2>
+          <p className="mx-auto mt-8 max-w-2xl text-pretty text-lg leading-8 text-muted-foreground">A scrapbook of the people, pixels, and perfectly unhinged moments that make your corner of Twitch feel like home. Scroll through the love letter your community made for you.</p>
+          <Button onClick={() => scrollTo("story")} variant="outline" className="mt-10 rounded-full">Begin the journey <ArrowDown data-icon="inline-end" /></Button>
+        </div>
+      </section>
 
-            <section id="messages" className="mx-auto max-w-6xl px-6 py-28 sm:px-10"><div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr]"><div><SectionKicker>Chapter three / in writing</SectionKicker><h2 className="font-serif text-5xl leading-none sm:text-6xl">A few words from your <span className="text-fuchsia-200">people.</span></h2><p className="mt-6 max-w-xs text-sm leading-7 text-fuchsia-100/55">The kind of messages that do not fit in a Twitch chat box.</p></div><div className="grid gap-4">{notes.map(([name, text], index) => <article key={name} className="rounded-2xl border border-fuchsia-100/10 bg-white/[0.04] p-6 sm:p-8"><div className="mb-6 flex items-center justify-between"><span className="text-xs font-semibold uppercase tracking-[0.2em] text-fuchsia-200">{name}</span><span className="font-serif text-3xl text-fuchsia-200/30">0{index + 1}</span></div><p className="max-w-2xl font-serif text-xl leading-8 text-fuchsia-50/90">\"{ text }\"</p></article>))}</div></div></section>
+      <section id="story" className="mx-auto grid max-w-7xl gap-10 px-6 py-28 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+        <div><p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">chapter 01 / the story</p><h2 className="mt-4 text-4xl font-bold sm:text-6xl">Press play on the memories.</h2><p className="mt-6 max-w-md leading-8 text-muted-foreground">A message from someone who has been there for the plot twists, the raids, the tears, and the legendary chat moments.</p><div className="mt-8 flex items-center gap-3 text-sm text-muted-foreground"><Heart className="size-4 text-primary" /> made with an unreasonable amount of love</div></div>
+        <div className="aspect-video overflow-hidden rounded-3xl border border-primary/30 bg-card shadow-2xl shadow-primary/10"><video className="size-full object-cover" controls preload="metadata" poster="/placeholder.svg"><track kind="captions" /><span>Your browser does not support video playback.</span></video></div>
+      </section>
 
-            <footer id="credits" className="border-t border-fuchsia-100/10 bg-[#241a2a] px-6 py-24 sm:px-10"><div className="mx-auto max-w-6xl"><SectionKicker>The final scroll / credits</SectionKicker><div className="flex flex-col justify-between gap-10 md:flex-row"><div><h2 className="max-w-xl font-serif text-5xl leading-none sm:text-7xl">Made with love,<br /><span className="text-fuchsia-200">and a little chaos.</span></h2><p className="mt-6 max-w-md text-sm leading-7 text-fuchsia-100/55">To every artist, editor, voice, clipper, and friend who made this surprise possible: thank you for adding a piece of yourself.</p></div><div className="grid gap-6 text-sm text-fuchsia-100/70 sm:grid-cols-2"><div><p className="mb-3 text-xs uppercase tracking-widest text-fuchsia-200">Artists & contributors</p><p>your wonderful friends<br />the community<br />every voice in the archive</p></div><div><p className="mb-3 text-xs uppercase tracking-widest text-fuchsia-200">Built by</p><p>the two suspicious organizers<br />with too much caffeine<br />for koohaaruuu</p></div></div></div><div className="mt-20 flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-fuchsia-100/35"><Volume2 className="size-3" /> End of transmission · made for Koo</div></div></footer>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <section id="clips" className="border-y border-border/60 bg-card/30 px-6 py-28"><div className="mx-auto max-w-7xl"><p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">chapter 02 / the chorus</p><div className="mt-4 flex flex-wrap items-end justify-between gap-6"><h2 className="text-4xl font-bold sm:text-6xl">From the people<br />who love you.</h2><p className="max-w-sm text-muted-foreground">Drop videos into <code className="rounded bg-muted px-1.5 py-0.5 text-foreground">lib/clips</code> and audio into <code className="rounded bg-muted px-1.5 py-0.5 text-foreground">lib/audios</code> to fill this collection.</p></div><div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{["A message for Koo", "The birthday mix", "One more thing..."].map((title) => <Card key={title} className="overflow-hidden border-primary/20 bg-background/70"><div className="flex aspect-video items-center justify-center bg-gradient-to-br from-primary/20 to-card"><Play className="size-10 text-primary" /></div><CardHeader><CardTitle>{title}</CardTitle></CardHeader><CardContent className="pt-0 text-sm text-muted-foreground">Your media file will appear here.</CardContent></Card>)}</div></div></section>
+
+      <section id="messages" className="mx-auto max-w-5xl px-6 py-28"><p className="text-center font-mono text-xs uppercase tracking-[0.3em] text-primary">chapter 03 / love notes</p><h2 className="mt-4 text-center text-4xl font-bold sm:text-6xl">Things we needed you to know.</h2><div className="mt-12 grid gap-5 md:grid-cols-3">{messages.map((message) => <Card key={message.from} className="border-primary/20 bg-card/60"><CardContent className="flex h-full flex-col justify-between p-7"><p className="text-lg leading-8">“{message.text}”</p><p className="mt-8 text-sm font-semibold text-primary">— {message.from}</p></CardContent></Card>)}</div></section>
+
+      <footer id="credits" className="border-t border-border/60 bg-card/30 px-6 py-24 text-center"><p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">end transmission</p><h2 className="mt-4 text-4xl font-bold">Made for Koohaaruuu.</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">With love to every artist, friend, editor, sender, and co-conspirator who helped make this surprise.</p><div className="mx-auto mt-10 flex max-w-2xl flex-wrap justify-center gap-3 text-sm text-muted-foreground"><Badge variant="secondary">Artists</Badge><Badge variant="secondary">Friends & family</Badge><Badge variant="secondary">The community</Badge><Badge variant="secondary">Developers</Badge></div></footer>
     </main>
   )
 }
 
-export function RecapNav() {
-  return <nav className="fixed right-5 top-5 z-50 hidden items-center gap-2 rounded-full border border-fuchsia-100/10 bg-[#241a2a]/70 p-2 text-xs backdrop-blur-md sm:flex"><a href="#welcome" className="rounded-full px-3 py-2 text-fuchsia-100/60 hover:bg-white/10 hover:text-white">Welcome</a><a href="#tributes" className="rounded-full px-3 py-2 text-fuchsia-100/60 hover:bg-white/10 hover:text-white">Archive</a><a href="#messages" className="rounded-full px-3 py-2 text-fuchsia-100/60 hover:bg-white/10 hover:text-white">Notes</a></nav>
-}
+export default RecapExperience
+
+// The names are intentionally stable so additional friend assets can be added without changing the layout.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _unused = friends
