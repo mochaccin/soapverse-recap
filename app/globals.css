@@ -4,40 +4,40 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Soapdax deep blue theme (dark) */
-  --background: #00071a;
-  --foreground: #e5e5e6;
-  --card: #000e33;
-  --card-foreground: #e5e5e6;
-  --popover: #000e33;
-  --popover-foreground: #e5e5e6;
-  --primary: #546dab;
-  --primary-foreground: #f2f2f3;
-  --secondary: #121621;
-  --secondary-foreground: #e5e5e6;
-  --muted: #19191a;
-  --muted-foreground: #96969c;
-  --accent: #2e5cd1;
-  --accent-foreground: #f2f2f3;
+  /* Koohaaruuu plum theme, anchored to her signature hair colour */
+  --background: #160d17;
+  --foreground: #f7edf4;
+  --card: #241522;
+  --card-foreground: #f7edf4;
+  --popover: #241522;
+  --popover-foreground: #f7edf4;
+  --primary: #c98ab7;
+  --primary-foreground: #1f101c;
+  --secondary: #382333;
+  --secondary-foreground: #f7edf4;
+  --muted: #2d1c2b;
+  --muted-foreground: #c3a9bd;
+  --accent: #8e4d7e;
+  --accent-foreground: #fff7fc;
   --destructive: #dc2626;
   --destructive-foreground: #fef2f2;
-  --border: #222b44;
-  --input: #222b44;
-  --ring: #546dab;
-  --chart-1: #546dab;
-  --chart-2: #5870a7;
-  --chart-3: #2e5cd1;
-  --chart-4: #768abc;
-  --chart-5: #587dda;
+  --border: #533448;
+  --input: #533448;
+  --ring: #c98ab7;
+  --chart-1: #c98ab7;
+  --chart-2: #a96798;
+  --chart-3: #8e4d7e;
+  --chart-4: #e2b4d2;
+  --chart-5: #743c68;
   --radius: 0.75rem;
-  --sidebar: #000e33;
-  --sidebar-foreground: #e5e5e6;
-  --sidebar-primary: #546dab;
-  --sidebar-primary-foreground: #f2f2f3;
-  --sidebar-accent: #121621;
-  --sidebar-accent-foreground: #e5e5e6;
-  --sidebar-border: #222b44;
-  --sidebar-ring: #546dab;
+  --sidebar: #241522;
+  --sidebar-foreground: #f7edf4;
+  --sidebar-primary: #c98ab7;
+  --sidebar-primary-foreground: #1f101c;
+  --sidebar-accent: #382333;
+  --sidebar-accent-foreground: #f7edf4;
+  --sidebar-border: #533448;
+  --sidebar-ring: #c98ab7;
 }
 
 .light {
@@ -115,6 +115,65 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@keyframes float-one {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-4deg); }
+  50% { transform: translate3d(12px, -18px, 0) rotate(5deg); }
+}
+
+@keyframes float-two {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(5deg); }
+  50% { transform: translate3d(-14px, 16px, 0) rotate(-6deg); }
+}
+
+@keyframes float-three {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(3deg); }
+  50% { transform: translate3d(18px, 10px, 0) rotate(-5deg); }
+}
+
+.animate-float-1 { animation: float-one 6s ease-in-out infinite; }
+.animate-float-2 { animation: float-two 7s ease-in-out 0.4s infinite; }
+.animate-float-3 { animation: float-three 8s ease-in-out 0.8s infinite; }
+.animate-float-4 { animation: float-two 7.5s ease-in-out 1s infinite reverse; }
+.animate-float-5 { animation: float-one 8.5s ease-in-out 1.4s infinite reverse; }
+.animate-float-6 { animation: float-three 6.5s ease-in-out 1.8s infinite reverse; }
+
+@keyframes reveal-burst {
+  0% { opacity: 1; transform: scale(0.2); }
+  65% { opacity: 0.75; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.8); }
+}
+
+.reveal-explosion {
+  background: radial-gradient(circle, rgb(201 138 183 / 35%), transparent 58%);
+  animation: reveal-burst 1.2s cubic-bezier(0.2, 0.75, 0.3, 1) forwards;
+}
+
+.reveal-explosion span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 9999px;
+  background: var(--primary);
+  box-shadow: 0 0 1rem var(--primary);
+  animation: burst-particle 1s ease-out forwards;
+}
+
+.reveal-explosion span:nth-child(1) { --x: -42vw; --y: -34vh; }
+.reveal-explosion span:nth-child(2) { --x: 40vw; --y: -28vh; }
+.reveal-explosion span:nth-child(3) { --x: -35vw; --y: 30vh; }
+.reveal-explosion span:nth-child(4) { --x: 38vw; --y: 34vh; }
+.reveal-explosion span:nth-child(5) { --x: -8vw; --y: -42vh; }
+.reveal-explosion span:nth-child(6) { --x: 14vw; --y: -38vh; }
+.reveal-explosion span:nth-child(7) { --x: -18vw; --y: 40vh; }
+.reveal-explosion span:nth-child(8) { --x: 22vw; --y: 38vh; }
+
+@keyframes burst-particle {
+  from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  to { opacity: 0; transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(0.15); }
 }
 
 @layer base {
