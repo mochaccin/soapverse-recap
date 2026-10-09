@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import Image from "next/image"
 import { ArrowDown, Gift, Heart, LockKeyhole, Play, Sparkles, Stars } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -8,9 +8,12 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const friends = [
-  { name: "friend one", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vipersoap-PdOBkYjB31nUZaP1jqQqC4iJkG6L9d.gif", position: "left-[5%] top-[16%]" },
-  { name: "friend two", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soap-talkgif-Y15s75BBYOv0BHDccKoVSeSruK0iE0.gif", position: "right-[6%] top-[22%]" },
-  { name: "friend three", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/halloweensoap-MnLLyEqyCzg8bjZS8CXFTGWxqRpoWZ.gif", position: "left-[18%] bottom-[18%]" },
+  { name: "friend one", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vipersoap-PdOBkYjB31nUZaP1jqQqC4iJkG6L9d.gif", position: "left-[4%] top-[14%]" },
+  { name: "friend two", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soap-talkgif-Y15s75BBYOv0BHDccKoVSeSruK0iE0.gif", position: "right-[5%] top-[18%]" },
+  { name: "friend three", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/halloweensoap-MnLLyEqyCzg8bjZS8CXFTGWxqRpoWZ.gif", position: "left-[13%] bottom-[15%]" },
+  { name: "friend four", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vipersoap-PdOBkYjB31nUZaP1jqQqC4iJkG6L9d.gif", position: "right-[15%] bottom-[12%]" },
+  { name: "friend five", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soap-talkgif-Y15s75BBYOv0BHDccKoVSeSruK0iE0.gif", position: "left-[34%] top-[10%]" },
+  { name: "friend six", src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/halloweensoap-MnLLyEqyCzg8bjZS8CXFTGWxqRpoWZ.gif", position: "right-[34%] bottom-[10%]" },
 ]
 
 const messages = [
@@ -23,7 +26,12 @@ export function RecapExperience() {
   const [reveals, setReveals] = useState(0)
   const [unlocked, setUnlocked] = useState(false)
   const [troll, setTroll] = useState(false)
-  const buttonPosition = useMemo(() => reveals === 1 ? "translate-x-24 -translate-y-8" : reveals === 2 ? "-translate-x-24 translate-y-6" : "", [reveals])
+  const buttonPosition = useMemo(() => reveals === 1 ? "translate-x-40 -translate-y-12 rotate-6" : reveals === 2 ? "-translate-x-40 translate-y-10 -rotate-6" : "", [reveals])
+
+  useEffect(() => {
+    document.body.style.overflow = unlocked ? "" : "hidden"
+    return () => { document.body.style.overflow = "" }
+  }, [unlocked])
 
   const reveal = () => {
     if (reveals < 2) {
@@ -61,7 +69,7 @@ export function RecapExperience() {
         </div>
       </section>
 
-      {unlocked && <div className="fixed inset-0 z-40 pointer-events-none animate-pulse bg-primary/10" aria-hidden="true" />}
+      {unlocked && <div className="fixed inset-0 z-40 pointer-events-none reveal-explosion" aria-hidden="true"><span /><span /><span /><span /><span /><span /><span /><span /></div>}
 
       <section id="welcome" className="relative flex min-h-screen items-center justify-center border-t border-border/60 px-6 py-28">
         {friends.map((friend, index) => <Image key={friend.name} src={friend.src} alt={friend.name} width={96} height={96} unoptimized className={`absolute ${friend.position} pixelated animate-float-${index + 1} hidden rounded-2xl border border-primary/30 bg-card/70 p-2 shadow-xl md:block`} />)}
